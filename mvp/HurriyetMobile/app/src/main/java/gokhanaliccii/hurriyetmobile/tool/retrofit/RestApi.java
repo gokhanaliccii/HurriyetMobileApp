@@ -17,7 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RestApi {
 
-    private String BASE_URL = "api.hurriyet.com.tr/";
+    private String BASE_URL = "https://api.hurriyet.com.tr/";
 
     private static RestApi instance;
 
