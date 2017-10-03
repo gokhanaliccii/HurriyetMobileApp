@@ -19,6 +19,7 @@ public class WriterPresenter implements WriterContact.Presenter {
         this.view = view;
     }
 
+
     @Override
     public void getWriters() {
         view.showProgress();
