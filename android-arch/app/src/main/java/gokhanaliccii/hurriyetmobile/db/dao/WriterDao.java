@@ -1,6 +1,7 @@
 package gokhanaliccii.hurriyetmobile.db.dao;
 
 import android.arch.persistence.room.Dao;
+import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 
 import java.util.List;
@@ -17,4 +18,9 @@ public interface WriterDao {
     @Query("select * from Writer")
     List<Writer> getWriters();
 
+    @Insert
+    void insertWriter(Writer writer);
+
+    @Insert
+    void insertWriter(Writer ...writer);
 }
