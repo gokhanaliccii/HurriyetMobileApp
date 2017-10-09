@@ -21,6 +21,9 @@ public interface WriterDao {
     @Query("select * from WriterEntity")
     List<WriterEntity> getWriters();
 
+    @Query("select * from WriterEntity where id IN(:ids)")
+    WriterEntity getWriters(String ids);
+
     @Insert()
     void insertWriter(WriterEntity writer);
 
