@@ -45,4 +45,25 @@ public class WriterDaoTest {
         Assert.assertThat(writers.size(), IsEqual.equalTo(1));
     }
 
+    @Test
+    public void shouldListWritersAfterInsertionCorrectly() {
+        final WriterEntity writerEntity = new WriterEntity("gokhan", "alıcı");
+        writerDao.insertWriter(writerEntity);
+        writerDao.insertWriter(writerEntity);
+
+        List<WriterEntity> writerEntities = writerDao.getWriters();
+        Assert.assertThat(writerEntities.size(), IsEqual.equalTo(2));
+    }
+
+    @Test
+    public void shouldDeleteWriterCorrectly(){
+        final WriterEntity writerEntity = new WriterEntity("gokhan", "alıcı");
+        writerDao.insertWriter(writerEntity);
+
+        writerDao.remove(writerEntity);
+
+        List<WriterEntity> writers = writerDao.getWriters();
+        Assert.assertThat(writers.size(), IsEqual.equalTo(0));
+    }
+
 }
