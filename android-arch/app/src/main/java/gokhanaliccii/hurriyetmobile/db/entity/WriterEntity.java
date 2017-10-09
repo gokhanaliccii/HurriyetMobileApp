@@ -16,6 +16,19 @@ public class WriterEntity {
     private String name;
     private String surname;
 
+    public WriterEntity(String name, String surname) {
+        this.name = name;
+        this.surname = surname;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }

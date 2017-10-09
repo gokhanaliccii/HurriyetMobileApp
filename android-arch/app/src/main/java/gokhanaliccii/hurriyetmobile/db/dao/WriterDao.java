@@ -6,7 +6,7 @@ import android.arch.persistence.room.Query;
 
 import java.util.List;
 
-import gokhanaliccii.hurriyetmobile.model.Writer;
+import gokhanaliccii.hurriyetmobile.db.entity.WriterEntity;
 
 /**
  * Created by gokhan on 08/10/17.
@@ -15,12 +15,12 @@ import gokhanaliccii.hurriyetmobile.model.Writer;
 @Dao
 public interface WriterDao {
 
-    @Query("select * from Writer")
-    List<Writer> getWriters();
+    @Query("select * from WriterEntity")
+    List<WriterEntity> getWriters();
 
     @Insert
-    void insertWriter(Writer writer);
+    void insertWriter(WriterEntity writer);
 
     @Insert
-    void insertWriter(Writer ...writer);
+    void insertWriter(WriterEntity ...writer);
 }
