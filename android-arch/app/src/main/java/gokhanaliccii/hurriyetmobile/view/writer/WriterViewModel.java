@@ -13,4 +13,9 @@ public class WriterViewModel extends ViewModel {
 
     private Repository<WriterEntity> writerRepository;
 
+    public WriterViewModel(Repository<WriterEntity> writerRepository) {
+        this.writerRepository = writerRepository;
+    }
+
+
 }
