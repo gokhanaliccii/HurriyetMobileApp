@@ -4,7 +4,8 @@ import android.app.Application;
 
 import gokhanaliccii.hurriyetmobile.db.AppDatabase;
 import gokhanaliccii.hurriyetmobile.db.facade.DatabaseFacade;
-import gokhanaliccii.hurriyetmobile.di.Provider;
+import gokhanaliccii.hurriyetmobile.di.factory.FactoryProvider;
+import gokhanaliccii.hurriyetmobile.di.repository.RepositoryProvider;
 
 /**
  * Created by gokhan on 08/10/17.
@@ -13,7 +14,9 @@ import gokhanaliccii.hurriyetmobile.di.Provider;
 public class App extends Application {
 
     private AppDatabase database;
-    private Provider repositoryProvider;
+
+    private static FactoryProvider factoryProvider;
+
 
     @Override
     public void onCreate() {
@@ -24,10 +27,12 @@ public class App extends Application {
 
     private void init() {
         database = DatabaseFacade.newInstance(this).database();
+
+        factoryProvider = new FactoryProvider(new RepositoryProvider(database));
     }
 
-    public static Provider repositoryProvider() {
-        return repositoryProvider();
+    public static FactoryProvider factoryProvider() {
+        return factoryProvider;
     }
 
 

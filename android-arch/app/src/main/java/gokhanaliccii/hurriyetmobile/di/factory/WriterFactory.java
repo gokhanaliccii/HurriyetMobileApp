@@ -10,7 +10,7 @@ import gokhanaliccii.hurriyetmobile.view.writer.WriterViewModel;
 /**
  * Created by gokhan on 16/10/17.
  */
-class WriterFactory implements ViewModelProvider.Factory{
+public class WriterFactory implements ViewModelProvider.Factory{
 
     private Repository<WriterEntity> writerRepository;
 
