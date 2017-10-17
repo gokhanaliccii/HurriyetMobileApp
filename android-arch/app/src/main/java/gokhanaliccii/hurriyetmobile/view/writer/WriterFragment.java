@@ -15,12 +15,14 @@ import static gokhanaliccii.hurriyetmobile.App.factoryProvider;
 
 public class WriterFragment extends LifecycleFragment {
 
+    private WriterViewModel writerViewModel;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         WriterFactory writerFactory = factoryProvider().writerFactory();
-        ViewModelProviders.of(this, writerFactory)
+        writerViewModel = ViewModelProviders.of(this, writerFactory)
                 .get(WriterViewModel.class);
 
 
