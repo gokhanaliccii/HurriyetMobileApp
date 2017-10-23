@@ -62,7 +62,7 @@ public class WriterFragment extends Fragment implements WriterContact.View {
 
     @Override
     public void showWriters(Writer[] writers) {
-        //yazar listesi buraya dusecek
+
 
     }
 }

@@ -21,4 +21,4 @@ public class Writer {
     public String getWriterName() {
         return writerName;
     }
-} //gelen cevap list ceklinde şimdi gidelim bunu restrofitte ki api ye yazalım
+}

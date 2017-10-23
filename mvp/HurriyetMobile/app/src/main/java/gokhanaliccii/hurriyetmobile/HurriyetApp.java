@@ -12,6 +12,5 @@ public class HurriyetApp extends Application {
     public void onCreate() {
         super.onCreate();
 
-        /* burada ihtiyac duydugumuz birşey varsa uygulamanın ilk olusturuldugun da burda yapıcaz */
     }
 }
